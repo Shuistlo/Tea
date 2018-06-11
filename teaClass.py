@@ -46,13 +46,38 @@ class Tea:
         self.sugarAmount = sugarAmount
         self.temperature = temperature
 
+    def getBase(self):
+        return self.teaBase
+
     def getSize(self):
-        """
-        gets size
-        """
         return self.size
 
-    # other getters
+    def getToppings(self):
+        return self.toppings
+
+    def getMilk(self):
+        return self.milk
+
+    def getSugar(self):
+        return self.sugarAmount
+
+    def getTemp(self):
+        return self.temperature
+
+    def setBase(self, base):
+        self.teaBase = base
+
+    def setSize(self, nSize):
+        self.size = nSize
+
+    def setToppings(self, nToppings):
+        #no functionality yet
+
+    def setMilk(self, nMilk):
+        self.milk = nMilk
+
+    def setTemp(self, nTemp):
+        self.temperature = nTemp
 
     def __str__(self):
         """
