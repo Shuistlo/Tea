@@ -42,6 +42,7 @@ class aGUI(tkinter.Frame):
         self.warmButton.pack({"side": "left"})
 
         #need a reset button
+        #need a create a tea button
         #need a text box
 
         #what did i make
