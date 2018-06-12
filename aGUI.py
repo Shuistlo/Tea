@@ -41,10 +41,12 @@ class aGUI(tkinter.Frame):
         self.warmButton["command"] = self.teaFunctionality.warmPressed
         self.warmButton.pack({"side": "left"})
 
-        #need a reset button
-        #need a create a tea button
-        #need a text box
+        self.getTeaButton = tkinter.Button(self)
+        self.getTeaButton["text"] = "What tea have I made?"
+        self.getTeaButton["command"] = self.teaFunctionality.generatePressed
+        self.getTeaButton.pack({"side": "left"})
 
-        #what did i make
+        self.textBox = Text(root)
+        self.textBox.pack()
 
 tkinter._test()
