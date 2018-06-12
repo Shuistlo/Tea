@@ -76,6 +76,9 @@ class Tea:
     def setMilk(self, nMilk):
         self.milk = nMilk
 
+    def setSugar(self, nSugar):
+        self.sugarAmount = nSugar
+        
     def setTemp(self, nTemp):
         self.temperature = nTemp
 
