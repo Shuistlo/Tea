@@ -1,11 +1,10 @@
 """
 Maybe i'll make a tea class
 """
-import tkinter
-import aGUI
-import teaClass
+from tkinter import *
+from teaClass import Tea
 
-class teaFunctionanlity:
+class teaFunctionality:
     def __init__(self):
         '''
         starts TK framework
@@ -27,44 +26,44 @@ class teaFunctionanlity:
         '''
         cant make tea unless you have a base
         '''
-        return !(self.view.baseEntry.get() == "")
+        return not (self.view.baseEntry.get() == "")
         
     #has some kind of button counter:
     #odd number of clicks: milk = true
     #maybe should change the button if odd number of clicks like label "milk" becomes "MILK"
     def milkPressed(self):
-        if teaBaseS():
-            if milkCounter%2 == 1:
+        if self.teaBaseS():
+            if self.milkCounter%2 == 1:
                 self.model.setMilk(True)
-                milkCounter++
+                self.milkCounter += 1
             else:
                 self.model.setMilk(False)
-                milkCounter++
+                self.milkCounter += 1
 
     def hotPressed(self):
-        if teaBaseS():
+        if self.teaBaseS():
             self.model.setTemp("hot")
 
     def coldPressed(self):
-        if teaBaseS():
+        if self.teaBaseS():
             self.model.setTemp("cold")
 
     def warmPressed(self):
-        if teaBaseS():
+        if self.teaBaseS():
             self.model.setTemp("warm")
 
     #creates/updates the tea object and prints it in the textbox. not functioning.
     def getTeaPressed(self):
         self.view.textBox.delete(0, self.lastStringIndex)
-        if teaBaseS():
+        if self.teaBaseS():
             self.model.setBase(self.view.baseEntry.get())
             if self.view.sugarEntry.get() != 0:
                 self.model.setSugar(self.view.sugarEntry.get())
-            if self.view.sizeEntry.get(() != 0:
-                self.model.setSize(self.view.sizeEntry.get(())
-            self.view.textBox.insert(End, #need a way to put in the string interpretation here
-            self.lastStringIndex = #string interpretation's length                        
+            if self.view.sizeEntry.get() != 0:
+                self.model.setSize(self.view.sizeEntry.get(()))
+            self.view.textBox.insert(END, "test")
+            self.lastStringIndex = 0#string interpretation's length
         else:
             self.view.textBox.insert(END, self.error)
-            self.lastStringIndex = len(error)-1
+            self.lastStringIndex = len(self.error)-1
 

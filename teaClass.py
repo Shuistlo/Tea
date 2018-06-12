@@ -71,14 +71,15 @@ class Tea:
         self.size = nSize
 
     def setToppings(self, nToppings):
-        #no functionality yet
+        return
+    # no functionality yet
 
     def setMilk(self, nMilk):
         self.milk = nMilk
 
     def setSugar(self, nSugar):
         self.sugarAmount = nSugar
-        
+
     def setTemp(self, nTemp):
         self.temperature = nTemp
 
