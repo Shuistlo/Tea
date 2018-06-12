@@ -18,7 +18,7 @@ class teaFunctionanlity:
         self.error = "Tea base not specified!"
         
         root = tkinter.Tk()
-        self.model = teaClass.Tea()
+        self.model = teaClass.Tea() #want this to make a standard tea object
         self.view = aGUI.aGUI(self)
         self.view.mainloop()
         root.destroy()
@@ -29,6 +29,9 @@ class teaFunctionanlity:
         '''
         return !(self.view.baseEntry.get() == "")
         
+    #has some kind of button counter:
+    #odd number of clicks: milk = true
+    #maybe should change the button if odd number of clicks like label "milk" becomes "MILK"
     def milkPressed(self):
         if teaBaseS():
             if milkCounter%2 == 1:
@@ -50,9 +53,10 @@ class teaFunctionanlity:
         if teaBaseS():
             self.model.setTemp("warm")
 
+    #creates/updates the tea object and prints it in the textbox. not functioning.
     def getTeaPressed(self):
         self.view.textBox.delete(0, self.lastStringIndex)
-        if !teaBaseS():
+        if teaBaseS():
             self.model.setBase(self.view.baseEntry.get())
             if self.view.sugarEntry.get() != 0:
                 self.model.setSugar(self.view.sugarEntry.get())
